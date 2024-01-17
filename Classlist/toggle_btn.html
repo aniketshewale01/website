@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;
+            margin: 0 auto;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .box {
+            border: 2px solid black;
+            width: 200px;
+            height: 45px;
+            margin: 200px auto;
+            border-radius: 50px;
+            position: relative;
+            padding-top: 5px;
+            background-color: darkcyan;
+            transition-timing-function: linear;
+            transition: all 2s;
+        }
+
+        button {
+            position: absolute;
+            border-radius: 50%;
+            padding: 20px;
+            background-color: black;
+            border: none;
+        }
+
+        .box1 {
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+
+        }
+
+        .box2 {
+            background-color: black;
+            border: 1px solid red;
+            transition-timing-function: linear;
+            transition: all 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html -->
+    <div class="wrap">
+        <div class="box"> <button></button></div>
+    </div>
+    <!-- javascript -->
+
+    <script>
+        var box = document.getElementsByClassName('box');
+        var boxs = box[0];
+        var btn = document.getElementsByTagName('button');
+        var btns = btn[0];
+        var wrap = document.getElementsByClassName("wrap");
+        var wrap = wrap[0]
+
+
+        btns.addEventListener('click', function () {
+            btns.classList.toggle('box1');
+            boxs.classList.toggle('box2');
+            wrap.classList.toggle('box2')
+        })
+    </script>
+</body>
+
+</html>

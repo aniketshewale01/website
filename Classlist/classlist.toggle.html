@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .box1 {
+            background-color: green;
+            position: absolute;
+            right: 0
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html -->
+    <div class="box box1"> <button>toggle</button></div>
+    <!-- javascript -->
+    <script>
+        var box = document.getElementsByClassName('box');
+        var boxs = box[0];
+        var btn = document.getElementsByTagName('button');
+        var btns = btn[0];
+
+
+        btns.addEventListener('click', function () {
+            boxs.classList.toggle('box1')
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
